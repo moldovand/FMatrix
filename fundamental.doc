@@ -1,0 +1,54 @@
+NAME
+       fundamental - computes the fundamental matrix from image point 
+                     correspondences.
+
+SYNOPSIS
+       fundamental in_file1 in_file2 > outfile
+
+DESCRIPTION
+        The fundamental matrix is computed from two sets of corresponding
+        points. "fundamental" reads input data from the two files whose
+        names are given in the first and the second arguments. The format
+        of the input files (in_file1 and in_file2) is as follows:
+
+        (in_file1)           (in_file2)
+        --------------       --------------
+        sz                   sz
+        x[1]    y[1]         x[1]'  y[1]'
+             ...
+        x[sz]   y[sz]        x[n]'  y[sz]'
+        --------------       --------------
+
+	sz          : number of corresponding point pairs
+	x[i]  y[i]  : image coordinates of the i-th point in the
+                      first frame.
+	x[i]' y[i]' : image coordinates of the i-th point in the
+                      second frame.
+
+        The output of "fundamental" appears in the standard output. The 
+        titles in the output (outfile) indicate:
+
+	F      : computed fundamental matrix,
+	F+, F- : standard deviation pair.
+
+        These are 3 by 3 matrices normalized to norm 1. The fundamental
+        matrix F is a matrix such that the following "epipolar equation"
+        is satisfied in a statistically optimal
+        manner:
+
+                                /    \
+              /           \    | x[i]'|
+             | x[i] y[i] 1 | F | y[i]'| = 0,     i = 1, 2 ,..., sz.
+              \           /    |  1   |
+                                \    /
+
+        The standard deviation pair {F+, F-} describes the reliability
+        of the estimate.  For example, if F+ and F- coincide up to,
+        say, three significant digits, the estimate F is guaranteed to
+        have accuracy up to approximately three significant digits.
+        This is a theoretical accuracy bound, and it is impossible to
+        improve the accuracy any further for the given data.
+
+REFERENCE
+        K. Kanatani, Statistical Optimization for Geometric Computation:
+        Theory and Practice, Elsevier, Amsterdam, 1996.

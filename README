@@ -1,0 +1,82 @@
+1. Files
+
+  renormal.c     function "Renormal" for fundamental matrix computation.
+  renormal.h
+  correct.c      function "Correct" for optimal correction of fundamental
+                 matrix.
+  correct.h 
+  pdp.c          function "PDP" for standard deviation pair computation.
+  pdp.h
+  filedeal.c     functions for input and output.
+  filedeal.h
+  extra.c        tool functions for tensor computation.
+  extra.h        
+  main.c         main routine.
+
+  Libs/          libraries for matrix/tensor computation.
+
+  Makefile       make file.
+
+  true1.data     input data for execution tests.
+  true2.data
+  noise1.data
+  noise2.data
+
+  true_out       output data for execution tests.
+  noised_out
+
+
+2. Compilation
+
+  Run the "make" command in this directory. If things go well,
+  you will see a command file "fundamental" in this directory. The
+  compiler is assumed to be GNU g++.
+
+
+3. Test
+
+  Run
+    fundamental true1.data true2.data > your_true_out
+  and
+    fundamental noise1.data noise2.data > your_noised_out.
+  Compare "your_true_out" with "true_out" and "your_noised_out"
+  with "noised_out." If both pairs are identical, the program is
+  working properly.
+
+
+4. Information for the programs
+
+  For the information about "fundamental," refer to "fundamental.doc."
+  If you want to incorporate the function "Renormal" and "PDP" into your
+  own programs, see the codes in "main.c" as a reference.
+
+
+5. Reference
+
+  K. Kanatani, Statistical Optimization for Geometric Computation:
+  Theory and Practice, Elsevier, Amsterdam, 1996.
+
+
+6. Acknowledgments
+
+  Program codes in the following book are used for various numerical
+  computations including eigenvector calculation. We thank Haruhiko Okumura
+  for making numerical computation codes publicly available without imposing
+  any retractions on their distribution. 
+
+  H. Okumura, Algorithm Encyclopedia in C, Gijyutsu-Hyoron-Sha, Tokyo, 
+  1991. (ISBN4-87408-414-1 C3055)
+
+
+7. Notes
+
+  a. Please keep in mind that we cannot grantee our programs to be bug
+     free.
+  b. Please do not use our programs for commercial purposes.
+  c. When you publish or present your work in which our programs are
+     used, we are happy if you inform us so and publicly acknowledge so.
+
+
+                                  Kanatani Laboratory
+                                  Department of Computer Science
+                                  Gunma University

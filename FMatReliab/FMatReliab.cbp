@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="FMatReliab" />
+		<Option platforms="Windows;" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option platforms="Windows;" />
+				<Option output="bin\Debug\FMatReliab" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="true1.data true2.data" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-g" />
+			<Add option="-ffriend-injection" />
+			<Add directory="..\..\FMatrix" />
+			<Add directory="..\Libs" />
+		</Compiler>
+		<Linker>
+			<Add library="libFM.a" />
+			<Add directory="..\FMatReliab" />
+		</Linker>
+		<Unit filename="..\correct.cpp" />
+		<Unit filename="..\correct.h" />
+		<Unit filename="..\extra.cpp" />
+		<Unit filename="..\extra.h" />
+		<Unit filename="..\filedeal.cpp" />
+		<Unit filename="..\filedeal.h" />
+		<Unit filename="..\main.cpp" />
+		<Unit filename="..\pdp.cpp" />
+		<Unit filename="..\pdp.h" />
+		<Unit filename="..\renormal.cpp" />
+		<Unit filename="..\renormal.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

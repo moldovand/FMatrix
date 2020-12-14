@@ -1,0 +1,90 @@
+# depslib dependency file v1.0
+917270693 source:c:\fmatrix\extra.cpp
+	<statcomp.h>
+	<tool.h>
+
+889626366 c:\fmatrix\libs\statcomp.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"VectorN.h"
+	"Vector.h"
+	"MatrixMN.h"
+	"Matrix.h"
+	"ImagePosition.h"
+	"SpacePosition.h"
+
+910192159 c:\fmatrix\libs\vectorn.h
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<string.h>
+	<math.h>
+	"FileScan.h"
+	"defVM.h"
+
+889626366 c:\fmatrix\libs\filescan.h
+
+889626366 c:\fmatrix\libs\defvm.h
+
+889626366 c:\fmatrix\libs\vector.h
+	"VectorN.h"
+
+910237494 c:\fmatrix\libs\matrixmn.h
+	"VectorN.h"
+	"Vector.h"
+
+910237476 c:\fmatrix\libs\matrix.h
+	"MatrixMN.h"
+
+1306804991 c:\fmatrix\libs\imageposition.h
+
+889626366 c:\fmatrix\libs\spaceposition.h
+
+917275310 c:\fmatrix\libs\tool.h
+	"tensor.h"
+	"transform.h"
+
+917275244 c:\fmatrix\libs\tensor.h
+
+889626367 c:\fmatrix\libs\transform.h
+
+919936602 source:c:\fmatrix\filedeal.cpp
+	<statcomp.h>
+	<ctype.h>
+
+919677867 source:c:\fmatrix\main.cpp
+	<statcomp.h>
+	<tool.h>
+	"renormal.h"
+	"pdp.h"
+	"correct.h"
+	"extra.h"
+	"filedeal.h"
+
+919410695 c:\fmatrix\renormal.h
+
+918639966 c:\fmatrix\pdp.h
+
+917248103 c:\fmatrix\correct.h
+
+917274745 c:\fmatrix\extra.h
+
+918898023 c:\fmatrix\filedeal.h
+
+1308187912 source:c:\fmatrix\pdp.cpp
+	<statcomp.h>
+	<tool.h>
+	"correct.h"
+	"extra.h"
+
+1308187905 source:c:\fmatrix\renormal.cpp
+	<statcomp.h>
+	<tool.h>
+
+1308121732 source:c:\fmatrix\correct.cpp
+	<statcomp.h>
+	<tool.h>
+	"extra.h"
+
